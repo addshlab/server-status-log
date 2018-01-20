@@ -4,9 +4,18 @@ YEAR=`date '+%Y'`
 MONTH=`date '+%m'`
 DATE=`date '+%d'`
 
+
 LOG_DIR=logs
 LOG_FILE=${DATE}.log
 
+# 自動git push用
+git_push() {
+  git add -A
+  git commit -m "Send the log of  `date '+%Y-%m-%d'`"
+  git push origin master
+}
+
+# ログ出力
 _log() {
   # ログディレクトリが存在する場合
   if [ ! -e ${LOG_DIR} ]; then
@@ -51,6 +60,7 @@ _log ''
 
 _log "-------------------- Logged in user --------------------"
 
+# ユーザー名はマスクする
 while read line; do
   HEADLESS_USERNAME=`echo ${line} | sed -e "s/^\(.\)\(.*\) pts\(.*\)/\2/g"`
   USER_HOSTNAME=`echo ${line} | sed -e "s/^\(.\)\(.*\) (\(.*\))/\3/g"`
@@ -63,3 +73,9 @@ done <<END
 END
 
 _log ""
+
+
+if [[ $1 = gitpush ]]; then
+  gitpush
+fi
+
