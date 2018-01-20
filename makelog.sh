@@ -76,6 +76,6 @@ _log ""
 
 
 if [[ $1 = gitpush ]]; then
-  gitpush
+  git_push
 fi
 
