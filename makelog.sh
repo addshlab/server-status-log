@@ -8,13 +8,6 @@ DATE=`date '+%d'`
 LOG_DIR=logs
 LOG_FILE=${DATE}.log
 
-# 自動git push用
-git_push() {
-  git add -A
-  git commit -m "Send the log of  `date '+%Y-%m-%d'`"
-  git push origin master
-}
-
 # ログ出力
 _log() {
   # ログディレクトリが存在する場合
@@ -73,9 +66,4 @@ done <<END
 END
 
 _log ""
-
-
-if [[ $1 = gitpush ]]; then
-  git_push
-fi
 
