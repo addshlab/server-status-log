@@ -1,5 +1,6 @@
 #!/bin/sh
 
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
 YEAR=`date '+%Y'`
 MONTH=`date '+%m'`
 DATE=`date '+%d'`
@@ -10,6 +11,8 @@ LOG_FILE=${DATE}.log
 
 # ログ出力
 _log() {
+  cd ${SCRIPT_DIR}
+
   # ログディレクトリが存在する場合
   if [ ! -e ${LOG_DIR} ]; then
     mkdir ${LOG_DIR}
