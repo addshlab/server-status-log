@@ -1,0 +1,31 @@
+==================== 2019-03-27 11:55:01 ====================
+
+-------------------- uptime --------------------
+ 11:55:01 up  1:22,  1 user,  load average: 0.00, 0.04, 0.05
+
+-------------------- System info --------------------
+Linux aws-spot-t3micro 3.10.0-957.1.3.el7.x86_64 #1 SMP Thu Nov 29 14:49:43 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+
+-------------------- Storage usage --------------------
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1   30G  6.1G   24G  21% /
+devtmpfs        459M     0  459M   0% /dev
+tmpfs           482M     0  482M   0% /dev/shm
+tmpfs           482M   13M  470M   3% /run
+tmpfs           482M     0  482M   0% /sys/fs/cgroup
+tmpfs            97M     0   97M   0% /run/user/1000
+tmpfs            97M     0   97M   0% /run/user/1002
+tmpfs            97M     0   97M   0% /run/user/0
+
+-------------------- System load --------------------
+Linux 3.10.0-957.1.3.el7.x86_64 (aws-spot-t3micro) 	03/27/2019 	_x86_64_	(2 CPU)
+
+10:31:15 AM       LINUX RESTART
+
+10:40:01 AM     CPU     %user     %nice   %system   %iowait    %steal     %idle
+11:40:01 AM     all      1.53      0.01      0.40      0.33      0.08     97.65
+Average:        all      1.53      0.01      0.40      0.33      0.08     97.65
+
+-------------------- Logged in user --------------------
+cad1bd 2019-03-27 10:58
+
